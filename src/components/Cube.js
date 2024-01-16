@@ -28,24 +28,24 @@ const Cube = () => {
         <div className="image-cube" style={{ transform: `rotateY(${pos}deg)` }}>
 
             {/* Front Side */}
-          <div className="front  bg-red-50 p-1  bg_card">
-          <h1 className='text-xl w-[80%]  mt-3 font-bold text-white'>Watch Live Score</h1>
+          <div className="p-1 front bg-[#151515] ">
+          {/* <h1 className='text-xl w-[80%]  mt-3 font-bold text-white'>Watch Live Score</h1> */}
           </div>
 
             {/* Right Side */}
             
-          <div className="right bg-red-50 p-1 flex flex-col items-start justify-center gap-y-2 bg_score">  
+          <div className="flex flex-col items-start justify-center p-1 right bg-red-50 gap-y-2 bg_score">  
             <Data/> 
           </div>
 
             {/* Back Side */}
-          <div className="back bg-red-50 p-1  bg_card">
-          <h1 className='text-xl w-[80%]  mt-3 font-bold text-white'>Watch Live Score</h1>
+          <div className="p-1 back bg-[#151515] ">
+          {/* <h1 className='text-xl w-[80%]  mt-3 font-bold text-white'>Watch Live Score</h1> */}
           </div>
 
             {/* Left Side */}
-          <div className="left bg-red-50 p-1 flex flex-col items-start justify-center gap-y-2 bg_score">
-           <Data/>
+          <div className="left  p-1 flex flex-col items-start justify-center gap-y-2 bg-[#151515]">
+           {/* <Data/> */}
           </div>
        
         </div>
