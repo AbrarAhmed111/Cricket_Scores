@@ -4,9 +4,10 @@ import Header from "../components/header/Header";
 const Main = props => {
 	return (
 		<>
-			<Header/>
+		<div className="min-h-[100vh] ">
+
 			{props.children}
-			<Footer/>
+		</div>
 		</>
 	);
 };

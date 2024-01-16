@@ -1,3 +1,4 @@
+import Cube from '../components/Cube';
 import Home from '../components/home/Home';
 import AuthView from '../views/auth/AuthView';
 import Login from '../views/Login';
@@ -18,7 +19,7 @@ let routes = [
 	},
 	{
 		path: '/',
-		component: Home,
+		component: Cube,
 		layout: 'main',
 	},
 ];
