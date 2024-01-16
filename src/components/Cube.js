@@ -1,7 +1,15 @@
 import React, { useState, useEffect } from 'react';
+import { IoMdCloseCircle } from "react-icons/io";
 
 const Cube = () => {
-  const [pos, setPos] = useState(90);
+  const [pos, setPos] = useState(0);
+  const [isOpen, setIsOpen] = useState(true);
+
+  const toggleHandler = () =>
+  {
+    setIsOpen(!isOpen)
+  }  
+
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -11,8 +19,9 @@ const Cube = () => {
     return () => clearInterval(intervalId);
   }, []);
   return (
-    <> 
-    <div className='absolute left-2 bottom-28'>
+    <>
+     <IoMdCloseCircle onClick={toggleHandler} size={30} className={`${isOpen ? 'block' : 'hidden'} text-blue-500 absolute left-[17.5px] cursor-pointer bottom-[215px]`}/> 
+    <div className={`${isOpen ? 'block' : 'hidden'} absolute left-2 bottom-28`}>
     <div className="wrapper">
       <div className="container">
         <div className="image-cube" style={{ transform: `rotateY(${pos}deg)` }}>
