@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 
-import img from '../assets/img/demo.png'
 const Cube = () => {
   const [pos, setPos] = useState(90);
 
@@ -12,16 +11,19 @@ const Cube = () => {
     return () => clearInterval(intervalId);
   }, []);
   return (
-    <div className='absolute left-8 bottom-36'>
-
+    <> 
+    <div className='absolute left-2 bottom-28'>
     <div className="wrapper">
       <div className="container">
         <div className="image-cube" style={{ transform: `rotateY(${pos}deg)` }}>
+
+            {/* Front Side */}
           <div className="front  bg-red-50 p-1  bg_card">
           <h1 className='text-xl w-[80%]  mt-3 font-bold text-white'>Watch Live Score</h1>
           </div>
-          <div className="right bg-red-50 p-1 flex flex-col items-start justify-center gap-y-2 bg_score">
 
+            {/* Right Side */}
+          <div className="right bg-red-50 p-1 flex flex-col items-start justify-center gap-y-2 bg_score">
           <h1 className='absolute top-1 right-2 text-blue-500 font-bold'>Live</h1>
           <div className='w-full justify-between items-center flex pr-2 mb-3 mt-[108px] text-white font-semibold'>
             {/* Country Names */}
@@ -36,10 +38,13 @@ const Cube = () => {
             <p className='text-blue-500'>Yet to bat</p>
          </div>
           </div>
+
+            {/* Back Side */}
           <div className="back bg-red-50 p-1  bg_card">
           <h1 className='text-xl w-[80%]  mt-3 font-bold text-white'>Watch Live Score</h1>
-
           </div>
+
+            {/* Left Side */}
           <div className="left bg-red-50 p-1 flex flex-col items-start justify-center gap-y-2 bg_score">
           <h1 className='absolute top-1 right-2 text-blue-500 font-bold'>Live</h1>
           <div className='w-full justify-between items-center flex pr-2 mb-3 mt-[108px] text-white font-semibold'>
@@ -60,6 +65,7 @@ const Cube = () => {
       
     </div>
     </div>
+    </>
   );
 };
 
