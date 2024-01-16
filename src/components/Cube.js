@@ -27,7 +27,7 @@ const Cube = () => {
           Timezone: '5'
         },
         headers: {
-          'X-RapidAPI-Key': '8c097fec9dmshbbf039acc4a1698p1f8582jsn8e8505266a68',
+          'X-RapidAPI-Key': '3bd08291bbmshfc601e0741f7c6ap150b4cjsnf77f52bca2c2',
           'X-RapidAPI-Host': 'livescore6.p.rapidapi.com'
         }
       };
@@ -39,11 +39,11 @@ const Cube = () => {
         setError(error);
       }
     };
-    const intervalId = setInterval(() => {
-      fetchData();
-    }, 3000);
+    // const intervalId = setInterval(() => {
+    //   fetchData();
+    // }, 3000);
 
-    return () => clearInterval(intervalId);
+    // return () => clearInterval(intervalId);
  
   }, []); 
   useEffect(() => {
@@ -55,14 +55,14 @@ const Cube = () => {
 
         if (event && event.T1 && event.T1.length > 0 && event.T2 && event.T2.length > 0) {
           const teamOneDetails = {
-            name: event.T1[0].Nm,
+            name: event.T1[0].Abr,
             score: event.Tr1C1,
             over: event.Tr1CO1,
             wicket: event.Tr1CW1
           };
 
           const teamTwoDetails = {
-            name: event.T2[0].Nm,
+            name: event.T2[0].Abr,
             score: event.Tr2C1,
             over: event.Tr2CO1,
             wicket: event.Tr2CW1
@@ -102,7 +102,7 @@ const Cube = () => {
          <div className='w-full justify-between items-center flex pr-2 mb-3 mt-[108px] text-white font-semibold'>
             {/* Country Names */}
             <h5 className='text-[15px] '>{teamOne?.name}</h5>
-            <span className='text-[10px] text-yellow-400'>vs</span>
+            <span className='text-[20px] text-yellow-400'>vs</span>
             <h5 className='text-[15px]'>{teamTwo?.name}</h5>
          </div>
          <div className='w-full justify-between items-center flex pl-[2px] pr-[6px] mt-[135px] text-[13px]'>
@@ -126,7 +126,7 @@ const Cube = () => {
          <div className='w-full justify-between items-center flex pr-2 mb-3 mt-[108px] text-white font-semibold'>
             {/* Country Names */}
             <h5 className='text-[15px] '>{teamOne?.name}</h5>
-            <span className='text-[10px] text-yellow-400'>vs</span>
+            <span className='text-[20px] text-yellow-400'>vs</span>
             <h5 className='text-[15px]'>{teamTwo?.name}</h5>
          </div>
          <div className='w-full justify-between items-center flex pl-[2px] pr-[6px] mt-[135px] text-[13px]'>
