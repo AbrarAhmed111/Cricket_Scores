@@ -6,7 +6,6 @@ import Temperature from './Temperature';
 const Cube = () => {
   const [pos, setPos] = useState(0);
   const [isOpen, setIsOpen] = useState(true);
-  const backgroundImageUrl = 'url("../assets/img/sunshine.jpg")';
 
   const toggleHandler = () =>
   {
@@ -29,9 +28,9 @@ const Cube = () => {
         <div className="image-cube" style={{ transform: `rotateY(${pos}deg)` }}>
 
             {/* Front Side */}
-          <div  className=" front">
+          <div className="p-1 front bg-[#151515] ">
           {/* <h1 className='text-xl w-[80%]  mt-3 font-bold text-white'>Watch Live Score</h1> */}
-          <Temperature/>
+      
           </div>
 
             {/* Right Side */}
@@ -46,8 +45,9 @@ const Cube = () => {
           </div>
 
             {/* Left Side */}
-          <div className="left  p-1 flex flex-col items-start justify-center gap-y-2 bg-[#151515]">
+          <div className="left   flex flex-col items-start justify-center gap-y-2 ">
            {/* <Data/> */}
+           <Temperature/>
           </div>
        
         </div>

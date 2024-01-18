@@ -5,7 +5,7 @@ import axios from "axios";
 export default function Temperature() {
     const backgroundImageUrl = `url(${sunshineImage})`;
     const [weatherDetail, setWeatherDetail] = useState("");
-    const temperatureInCelsius = weatherDetail.main.temp - 273.15;
+    const temperatureInCelsius = weatherDetail?.main?.temp - 273.15;
     console.log(weatherDetail,'weatherDetail')
     const fetchData = async () => {
         try {
