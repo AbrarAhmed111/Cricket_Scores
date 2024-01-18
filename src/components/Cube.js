@@ -2,10 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { IoMdCloseCircle } from "react-icons/io";
 import axios from 'axios';
 import Data from './Data';
+import Temperature from './Temperature';
 const Cube = () => {
   const [pos, setPos] = useState(0);
   const [isOpen, setIsOpen] = useState(true);
-
+  const backgroundImageUrl = 'url("../assets/img/sunshine.jpg")';
 
   const toggleHandler = () =>
   {
@@ -28,8 +29,9 @@ const Cube = () => {
         <div className="image-cube" style={{ transform: `rotateY(${pos}deg)` }}>
 
             {/* Front Side */}
-          <div className="p-1 front bg-[#151515] ">
+          <div  className=" front">
           {/* <h1 className='text-xl w-[80%]  mt-3 font-bold text-white'>Watch Live Score</h1> */}
+          <Temperature/>
           </div>
 
             {/* Right Side */}

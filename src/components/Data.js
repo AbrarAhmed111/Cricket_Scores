@@ -94,9 +94,9 @@ const Data = () => {
          </div>
          <div className='w-full justify-between items-center flex pl-[2px] pr-[6px] mt-[135px] text-[13px]'>
             {/* status of country 1 */}
-            {teamOne?.score!= undefined?(<p className='text-blue-500'>{teamOne?.score}/{teamOne?.wicket} - ({teamOne?.over})</p>):(<p className='text-blue-500'>Yet to bet</p>)} 
+            {teamOne?.score!= undefined?(<p className='text-blue-500 text-xs'>{teamOne?.score}/{teamOne?.wicket} - ({teamOne?.over})</p>):(<p className='text-blue-500'>Yet to bet</p>)} 
             {/* status of country 2 */}
-           {teamTwo?.score!= undefined?(<p className='text-blue-500'>{teamTwo?.score}/{teamTwo?.wicket} - ({teamTwo?.over})</p>):(<p className='text-blue-500'>Yet to bet</p>)} 
+           {teamTwo?.score!= undefined?(<p className='text-blue-500 text-xs'>{teamTwo?.score}/{teamTwo?.wicket} - ({teamTwo?.over})</p>):(<p className='text-blue-500'>Yet to bet</p>)} 
         </div></>):(<p className='text-white text-[16px] mt-5 text-center'>No match in progress</p>)}
     </>
   )
